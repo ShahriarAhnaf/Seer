@@ -1,0 +1,23 @@
+{
+  "name": "seer",
+  "version": "1.0.0",
+  "description": "stock app",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^13.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahriarAhnaf/Seer.git"
+  },
+  "author": "Ahnaf Shahriar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShahriarAhnaf/Seer/issues"
+  },
+  "homepage": "https://github.com/ShahriarAhnaf/Seer#readme"
+}
