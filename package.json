@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "start"
+    "roll out": "electron ."
   },
   "repository": {
     "type": "git",
