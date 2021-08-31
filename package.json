@@ -4,11 +4,11 @@
   "description": "stock app",
   "main": "main.js",
   "dependencies": {
+    "axios": "^0.21.1",
     "electron": "^13.2.3"
   },
-  "devDependencies": {},
   "scripts": {
-    "roll out": "electron ."
+    "weez": "electron ."
   },
   "repository": {
     "type": "git",
