@@ -5,7 +5,8 @@
   "main": "main.js",
   "dependencies": {
     "axios": "^0.21.1",
-    "electron": "^13.2.3"
+    "electron": "^13.2.3",
+    "yahoo-finance": "^0.3.7"
   },
   "scripts": {
     "weez": "electron ."
