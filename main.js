@@ -1,16 +1,11 @@
 const { default: axios } = require('axios')
+
+import yahooFinance from 'yahoo-finance2';
+
 const { app, BrowserWindow } = require('electron')
 //use axios.all to get multiple data points if that is possible 
 //or use axios.get to use one single response point for the program
-axios.all([
-  axios.get('https://api.github.com/users/mapbox'),
-  axios.get('https://api.github.com/users/phantomjs')
-])
-.then(responseArr => {
-  //this will be executed only when all requests are complete
-  console.log('Date created: ', responseArr[0].data.created_at);
-  console.log('Date created: ', responseArr[1].data.created_at);
-});
+
 
 //making the window
 function createWindow () {
