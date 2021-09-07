@@ -18,8 +18,7 @@ function createWindow () {
 
   var yahooFinance = require('yahoo-finance');
 
-
-
+  
 yahooFinance.quote({
   symbol: 'AAPL',
   modules: ['summaryDetail', 'price']       // optional; default modules.
