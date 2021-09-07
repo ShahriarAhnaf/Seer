@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+      <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+      <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+      
+    <link rel="stylesheet" href="../styles/style.css">
+      <title>Seer</title>
+    </head>
+  <body>
+
+    <div id="chartContainer" style="height: 400px; width: 100%;">
+    
+    </div>
+    <h1>Buy or Sell?</h1>
+      <div class="stock-graph">
+        <table id="stockInfo">
+            <thead>
+              <tr>
+                <th id="time">time</th>
+                <th>price</th>
+                <th>percent change</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+              </tr>
+            </thead>
+            <tbody>
+              <td>this is the body</td>
+            </tbody>
+        </table>  
+      </div>
+      <div class="prices">
+      <p id= "price1"></p>
+      </div>
+  
+      <script src="../js/logic.js"></script>
+  
+  </body>
+</html>
