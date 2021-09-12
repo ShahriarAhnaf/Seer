@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require('electron')
-var yahooFinance = require('yahoo-finance');
+
+var yFinance = require('yahoo-finance');
+
 
 //making the window
 function createWindow () {
@@ -16,12 +18,11 @@ function createWindow () {
   });
   
 
-  var yahooFinance = require('yahoo-finance');
 
-  
-yahooFinance.quote({
-  symbol: 'AAPL',
-  modules: ['summaryDetail', 'price']       // optional; default modules.
-}, function(err, quote) {
-  console.log(quote);
-});
+  yFinance.quote({
+      symbol: 'TSLA',
+      modules: ['price', 'summaryDetail']       // optional; default modules.
+    }, function(err, quote) {
+      var price = quote.price.regularMarketPrice;
+      console.log(price);
+  });
