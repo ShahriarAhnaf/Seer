@@ -1,6 +1,9 @@
 # Seer
 Using Yahoo Finance node JS module to apply algorithm trading principles in real time. An app that will recommend buying and selling trends based on moving averages of stocks
+
 ###################################################################################################
+
+**INSTRUCTIONS**
 1. download repository
 2. make sure you have node js installed in your machine, you can check that by tying ``node`` in your bash/terminal/cmdline. If not installed install from this link [here](https://nodejs.org/en/download/).
 4. run ``npm install electron -g``
