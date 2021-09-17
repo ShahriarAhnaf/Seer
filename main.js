@@ -17,6 +17,7 @@ function createWindow () {
     createWindow()
   });
   
+  const Time = Date.now();
 
 
   yFinance.quote({
@@ -25,4 +26,7 @@ function createWindow () {
     }, function(err, quote) {
       var price = quote.price.regularMarketPrice;
       console.log(price);
+      const elapsed = Date.now() - Time;
+    console.log(elapsed);
   });
+

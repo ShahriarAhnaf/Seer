@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-      <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-      <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-      
-    <link rel="stylesheet" href="../styles/style.css">
-      <title>Seer</title>
-    </head>
-  <body>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style.css">
+ </head>
 
-    <div id="chartContainer" style="height: 400px; width: 100%;">
-    
+<body id="body">
+  <nav>
+    <a href="index.html">Add Tasks</a>
+    <div class="line"></div>
+  </nav>
+
+  <h2>Current Tasks</h2>
+
+  <div class="input-area">
+    <div class="enter">
+      <input type="text", id="zero", placeholder="Task...">
+      <button id="add" class="Btn">Add</button>
     </div>
-    <h1>Buy or Sell?</h1>
-      <div class="stock-graph">
-        <table id="stockInfo">
-            <thead>
-              <tr>
-                <th id="time">time</th>
-                <th>price</th>
-                <th>percent change</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-              </tr>
-            </thead>
-            <tbody>
-              <td>this is the body</td>
-            </tbody>
-        </table>  
-      </div>
-      <div class="prices">
-      <p id= "price1"></p>
-      </div>
+    <div class="listed-items">
+      <ul id="tasks">
+      </ul>
+    </div>
+    <div class="footer">
+      <button id="submit" class="Btn" >Rank Tasks</button>
+    </div>
+  </div>
   
+
+
+
       <script src="../js/logic.js"></script>
       <script src="../main.js"></script>
   </body>
