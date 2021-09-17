@@ -1,9 +1,10 @@
 var yFinance = require('yahoo-finance');
 
-
-document.getElementsByName('p').innerHTML = ' javascript has changed it';
-console.log("we in");
-
+if (window.location.href.includes("graph.html"))
+{
+    document.getElementsByName('p').innerHTML = ' javascript has changed it';
+    console.log("we in");
+}
 const Time = Date.now();
 var avg50, avg200;
 yFinance.quote({
