@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html>
+  <head>
   <meta charset="UTF-8">
   <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
   <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/style.css">
  </head>
 
 <body id="body">
   <nav>
-    <a href="index.html">Add Tasks</a>
+    <a href="index.html">Instant Prices</a>
+    <a href="../html/graphs.html">Get Graphs</a>
     <div class="line"></div>
   </nav>
 
-  <h2>Current Tasks</h2>
+  <h2>Enter a Ticker name for it to display here!</h2>
 
   <div class="input-area">
     <div class="enter">
-      <input type="text", id="zero", placeholder="Task...">
-      <button id="add" class="Btn">Add</button>
+      <input type="text", id="zero", placeholder="Stock Ticker">
+      <button id="add" class="Btn">Get Trend!</button>
     </div>
     <div class="listed-items">
       <ul id="tasks">
       </ul>
     </div>
     <div class="footer">
-      <button id="submit" class="Btn" >Rank Tasks</button>
+      <button id="submit" class="Btn" >Ticker Name</button>
     </div>
   </div>
   
-
-
-
-      <script src="../js/logic.js"></script>
-      <script src="../main.js"></script>
+  <script src="../js/logic.js"></script>
   </body>
 </html>
