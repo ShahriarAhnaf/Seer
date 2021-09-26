@@ -1,9 +1,8 @@
 // var yFinance = require('yahoo-finance');
 
-if (window.location.href.includes("graph.html"))
-{
-    document.getElementsByName('p').innerHTML = ' javascript has changed it';
-    console.log("we in");
+if (window.location.href.includes("graph.html")) {
+  document.getElementsByName('p').innerHTML = ' javascript has changed it';
+  console.log("we in");
 }
 
 
