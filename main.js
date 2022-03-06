@@ -5,7 +5,7 @@ const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
@@ -19,7 +19,6 @@ function createWindow () {
   mainWindow.loadFile('html/index.html')
 
   // Open the DevTools.
-  
   mainWindow.webContents.openDevTools()
 }
 
@@ -41,6 +40,7 @@ app.whenReady().then(() => {
 // explicitly with Cmd + Q.
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
+  else console.log("mac mf");
 })
 
 // In this file you can include the rest of your app's specific main process
