@@ -1,36 +1,29 @@
+<!--index.html-->
+
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="UTF-8">
-  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-  <link rel="stylesheet" href="../styles/style.css">
- </head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'; connect-src https://*.yahoo.com/">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <nav id="navigation">
+      <div>
+        <a href="graphs.html">Graphs</a>
+      </div>  
+    </nav>
+    
+    <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+    
+    <button id="btn" class="devBtn">Developer Power!</button>
 
-<body id="body">
-  <nav>
-    <a href="index.html">Instant Prices</a>
-    <a href="../html/graphs.html">Get Graphs</a>
-    <div class="line"></div>
-  </nav>
-
-  <h2>Enter a Ticker name for it to display here!</h2>
-
-  <div class="input-area">
-    <div class="enter">
-      <input type="text", id="zero", placeholder="Stock Ticker">
-      <button id="add" class="Btn">Get Trend!</button>
-    </div>
-    <div class="listed-items">
-      <ul id="tasks">
-      </ul>
-    </div>
-    <div class="footer">
-      <button id="submit" class="Btn" >Ticker Name</button>
-    </div>
-  </div>
-  
-  <script src="../js/logic.js"></script>
+    <!-- You can also require other files to run in this process -->
+    <script src="../bundle.js"></script>
   </body>
 </html>
