@@ -5,8 +5,8 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'; connect-src https://*.yahoo.com/">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Hello World!</title>
   </head>
   <body>
@@ -24,6 +24,6 @@
     <button id="btn" class="devBtn">Developer Power!</button>
 
     <!-- You can also require other files to run in this process -->
-    <script src="../js/logic.js"></script>
+    <script src="../bundle.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+
 var yFinance = require('yahoo-finance');
 
 if (window.location.href.includes("graph.html")) {
@@ -5,9 +6,14 @@ if (window.location.href.includes("graph.html")) {
   console.log("we in");
 }
 
-yahooFinance.quote({
+try{
+yFinance.quote({
   symbol: 'AAPL',
   modules: [ 'price', 'summaryDetail' ] // see the docs for the full list
 }, function (err, quotes) {
   console.log(quotes);
 });
+}
+catch(error){
+  console.log(error);
+}
