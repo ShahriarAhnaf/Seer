@@ -8,13 +8,7 @@ const url = require('url')
 
 function createWindow() {
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      preload: path.join(__dirname, 'src/js/preload.js')
-    }
-  })
+  const mainWindow = new BrowserWindow({});
 
   // and load the index.html of the app.
   mainWindow.loadFile('src/html/index.html')
@@ -34,8 +28,7 @@ app.whenReady().then(() => {
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    //if (BrowserWindow.getAllWindows().length === 0) createWindow()
-    createWindow(); // this will create a new window whenever the app is clicked like I want it to!
+    if (BrowserWindow.getAllWindows().length === 0) {createWindow();} // this will create a new window whenever the app is clicked like I want it to!
   })
 })
 
