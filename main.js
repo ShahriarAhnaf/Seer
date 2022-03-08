@@ -1,9 +1,9 @@
 // main.js
 
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, ipcMain, NativeImage } = require('electron')
+const { app, Menu, BrowserWindow, ipcMain, NativeImage } = require('electron')
 const path = require('path')
-
+const url = require('url')
 
 
 function createWindow() {
@@ -18,7 +18,10 @@ function createWindow() {
 
   // and load the index.html of the app.
   mainWindow.loadFile('src/html/index.html')
-  
+  //build menu from template 
+  const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+
+  //dev tools 
   mainWindow.webContents.openDevTools()
   //nativeTheme.themeSource = 'light'
 }
@@ -46,3 +49,12 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+
+
+
+const mainMenuTemplate = [
+  {
+    label: 'File'
+  }
+];
