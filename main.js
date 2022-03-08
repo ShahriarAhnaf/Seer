@@ -14,17 +14,14 @@ function createWindow() {
   mainWindow.loadFile('src/html/index.html')
   //build menu from template 
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-
-  //dev tools 
-  mainWindow.webContents.openDevTools()
-  //nativeTheme.themeSource = 'light'
+  Menu.setApplicationMenu(mainMenu);
 }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  createWindow()
+  createWindow();
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
@@ -48,6 +45,6 @@ app.on('window-all-closed', function () {
 
 const mainMenuTemplate = [
   {
-    label: 'File'
+    label: 'nigga'
   }
 ];
