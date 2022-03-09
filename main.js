@@ -5,11 +5,10 @@ const { createPublicKey } = require('crypto');
 const { app, Menu, MenuItem, BrowserWindow, ipcMain, NativeImage } = require('electron')
 const path = require('path')
 
-let mainWindow;
-
+ 
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({});
+  const  mainWindow = new BrowserWindow({});
 
   // and load the index.html of the app.
   mainWindow.loadFile('src/html/index.html')
@@ -45,12 +44,13 @@ app.on('window-all-closed', function () {
 
 
 const mainMenuTemplate = [
+  {label:'electron'}, // empty menu slot for the electron thing 
   {
     label: 'bruh',
     submenu:[
       {
         label: 'quit',
-        accelerator : process.platform = "darwin" ? "Command+Q" : "alt+f4",
+        accelerator : process.platform == 'darwin' ? "Command+Q" : "alt+f4",
         click(){
           console.log("finally my watch has ended");
           app.quit();
